@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4f0">
+    <meta
+      name="description"
+      content="Wanderlight is a curated collection of photographs celebrating the beauty of places near and far."
+    >
+    <title>Wanderlight — A little gallery of everywhere</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#" aria-label="Wanderlight home">
+        <span class="wordmark-mark" aria-hidden="true">w.</span>
+        <span>WANDERLIGHT</span>
+      </a>
+      <p class="header-note">A little gallery of everywhere</p>
+      <a class="header-link" href="#gallery">Explore the collection <span aria-hidden="true">↘</span></a>
+    </header>
+
+    <main>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy">
+          <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span> A COLLECTION OF MOMENTS</p>
+          <h1 id="page-title">Somewhere<br><span>beautiful.</span></h1>
+          <p class="intro-description">
+            A visual journal of quiet corners, faraway places, and the light in between.
+            Take your time and find a place to linger.
+          </p>
+        </div>
+        <div class="intro-aside" aria-hidden="true">
+          <span class="sun-mark">✳</span>
+          <span>COLLECTED<br>WITH CURIOSITY</span>
+        </div>
+      </section>
+
+      <section class="gallery-section" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE PHOTO JOURNAL</p>
+            <h2 id="gallery-title">A few favorite views<span class="heading-period">.</span></h2>
+          </div>
+          <p class="photo-count" id="photo-count" aria-live="polite"></p>
+        </div>
+
+        <nav class="filters" aria-label="Filter photos by category">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All places</button>
+          <button class="filter-button" type="button" data-filter="nature" aria-pressed="false">Nature</button>
+          <button class="filter-button" type="button" data-filter="coast" aria-pressed="false">Coast</button>
+          <button class="filter-button" type="button" data-filter="architecture" aria-pressed="false">Architecture</button>
+          <button class="filter-button" type="button" data-filter="city" aria-pressed="false">City life</button>
+        </nav>
+
+        <div class="gallery-grid" id="gallery-grid" aria-live="polite"></div>
+        <p class="gallery-hint">A closer look is just a click away <span aria-hidden="true">↗</span></p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="wordmark footer-wordmark" href="#" aria-label="Wanderlight home">
+        <span class="wordmark-mark" aria-hidden="true">w.</span>
+        <span>WANDERLIGHT</span>
+      </a>
+      <p>Made for the love of looking around.</p>
+      <a href="https://unsplash.com" target="_blank" rel="noreferrer">Photographs via Unsplash <span aria-hidden="true">↗</span></a>
+    </footer>
+
+    <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+      <div class="lightbox-frame">
+        <button class="lightbox-close icon-button" id="lightbox-close" type="button" aria-label="Close photo viewer">
+          <span aria-hidden="true">×</span>
+        </button>
+        <button class="lightbox-arrow lightbox-previous icon-button" id="lightbox-previous" type="button" aria-label="Previous photo">
+          <span aria-hidden="true">←</span>
+        </button>
+        <figure class="lightbox-figure">
+          <img class="lightbox-image" id="lightbox-image" alt="">
+          <figcaption class="lightbox-caption">
+            <span class="lightbox-location" id="lightbox-location"></span>
+            <span class="lightbox-description" id="lightbox-description"></span>
+            <span class="lightbox-counter" id="lightbox-counter" aria-live="polite"></span>
+          </figcaption>
+        </figure>
+        <button class="lightbox-arrow lightbox-next icon-button" id="lightbox-next" type="button" aria-label="Next photo">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+    </dialog>
+  </body>
+</html>
